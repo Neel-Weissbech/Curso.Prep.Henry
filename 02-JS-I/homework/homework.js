@@ -48,18 +48,17 @@ function divide(x, y) {
 }
 
 function sonIguales(x, y) {
-  if  sonIguales (x === y ) {
+  if (x === y ) {
     return true
   }
-    
-} else {
+     else {
   return false
 }
 
 
 
 function tienenMismaLongitud(str1, str2) {
-if tienenMismaLongitud (str1 === str2) {
+if  (str1 === str2) {
   return true
 } else {
   return false }
@@ -67,15 +66,20 @@ if tienenMismaLongitud (str1 === str2) {
 }
 
 function menosQueNoventa(num) {
-  if menosQueNoventa(a < b)
+  if (num < 90) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function mayorQueCincuenta(num) {
-  if mayorQueCincuenta(a > 50) {
-    return true
+  if (a > 50) {
+    return true;
   }
   else {
-    return false }
+    return false;
+   }
 }
 
 function obtenerResto(x, y) {
@@ -83,7 +87,7 @@ function obtenerResto(x, y) {
   // Tu código:
   function obtenerResto(a, b) {
     var diferencia = a - b;
-    return diferenciaa
+    return diferenciaa;
   
 }
 
@@ -92,7 +96,7 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num % 2 === 0) {
-    return treu; {
+    return treu;}
       else { return false ;
       }
     }
@@ -109,15 +113,15 @@ function esImpar(num) {
     } else { 
       return false;
     }
-    
+
   }
-}
+
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow (num;2)
+  return Math.pow (num , 2)
 }
 
 function elevarAlCubo(num) {
@@ -158,14 +162,17 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if {
-    numero === 0;
-  } else if (numero > 0) {
-    return "es positivo"
-  }  else {
-    return "es negativo"
+  if(numero === 0) {
+    return false;
+  }
+  else if(numero > 0) {
+    return "Es positivo";
+  }
+  else {
+    return "Es negativo";
   }
 }
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -178,7 +185,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var nombre + " " + apellido
+  var combinados = nombre + " " + apellido
   return combinados;
 }
 
