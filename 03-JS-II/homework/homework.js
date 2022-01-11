@@ -97,7 +97,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-     if (numero < 50 || numero > 20) {
+     if (numero < 50 && numero > 20) {
         return true;
       } else {
          return false;
@@ -128,8 +128,9 @@ function fizzBuzz(numero) {
     return "fizzbuzz";
   } else if (numero % 5 === 0) {
     return "buzz";
-  } else (numero % 3 === 0) 
-    return "fizz"; 
+  } else if (numero % 3 === 0) {
+    return "fizz"; }
+    else return numero
   
 }
 
@@ -139,17 +140,23 @@ function operadoresLogicos(num1, num2, num3) {
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num1 > 0 && num1 > num2 && num1 > num3) {
-    return "Número 1 es mayor y positivo";
-  } else if (num1 <0 || num2 < 0 || num3 < 0 ) {
-    return "Hay negativos";
-  } else if (num3 > num1 || num3 > num2) {
-    return num3 + 1
-  } else {
-    return false;
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
+  if  (num1 < 0 || num2 < 0 || num3 < 0) {
+  return "Hay negativos"; 
+ 
+}else if (num1 > 0 && num1> num2 && num1 > num3){
+  return "Número 1 es mayor y positivo";
   }
+  else if(num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error"}
+
+  else if (num3 > num2 || num3 > num1) {
+     return num3 + 1
+    } 
+ else { 
+   return false}
 }
+
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -157,23 +164,26 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-   if( numero, 2) return false;
+   if( numero < 2) return false;
    if(numero === 2) return true;
    for(var i = 2; i < numero ; i++ ) {
      if(numero % i === 0) {
        return false;
      }
+       
+     }
+    return true
   }
-}
+
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  if (vaolor === true) {
+  if ( valor === true) {
     return "Soy verdadero";
   } else {
-    return false;
+    return "Soy falso"
   }
 }
 
@@ -209,6 +219,7 @@ function doWhile(numero) {
   }
   while(i < 8);
   return a;
+  
 }
 
 
